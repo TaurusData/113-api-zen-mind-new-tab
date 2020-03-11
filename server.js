@@ -2,14 +2,14 @@ const express = require("express");
 const redis = require("redis");
 const bodyParser = require("body-parser");
 
-const { PORT } = require("./config");
+const { PORT, REDIS_URL } = require("./config");
 
 //setup port constants
-const port_redis = PORT_REDIS || 6379;
+const redis_url = REDIS_URL || 'redis://127.0.0.1:6379';
 const port = PORT || 4444;
 
 //configure redis client on port 6379
-const redis_client = redis.createClient(port_redis);
+const redis_client = redis.createClient(redis_url);
 
 //configure express server
 const app = express();
