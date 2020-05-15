@@ -4,8 +4,9 @@ dotenv.config();
 
 module.exports = {
   PORT,
-  UNSPLASH_APP_ID,
+  UNSPLASH_DEFAULT_APP_ID,
   UNSPLASH_PHOTO_CATEGORIES,
   REDIS_URL,
-  REDIS_TIME_EXP
+  REDIS_TIME_EXP,
+  UNSPLASH_APP_SBNT_ID
 } = process.env;
